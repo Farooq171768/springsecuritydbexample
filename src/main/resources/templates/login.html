@@ -18,8 +18,12 @@
                 <div class="card-body">
                     <h3>Login Here</h3>
                       <form action="@{/dologin}" method="post">
-                        <div class="text-success"></div>
-                        <div th:if="${param.error}" class="text-danger"></div>
+                        <div th:if="${param.logout}" class="text-success">
+                          You are Logged out
+                        </div>
+                        <div th:if="${param.error}" class="text-danger">
+                          Invalid Username or Password
+                        </div>
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Username:</label>
                           <input type="text" 
